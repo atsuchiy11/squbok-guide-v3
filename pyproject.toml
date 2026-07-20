@@ -1,0 +1,11 @@
+[project]
+name = "squbok-guide-v3"
+version = "0.1.0"
+description = "SQuBOK Guide documentation site powered by MkDocs"
+readme = "README.md"
+requires-python = ">=3.14"
+
+[dependency-groups]
+dev = [
+    "mkdocs-material",
+]
