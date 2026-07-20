@@ -1,0 +1,81 @@
+# MkDocs configuration file for SQuBOK Guide
+# Documentation: https://www.mkdocs.org/
+
+# Site information
+site_name: SQuBOK Guide
+site_description: ソフトウェア品質知識体系ガイド powered by MkDocs
+site_author: Atsushi Tsuchiya
+site_url: https://atsuchiy11.github.io/squbok-guide-v3/
+
+# Repository information
+repo_name: atsuchiy11/squbok-guide-v3
+repo_url: https://github.com/atsuchiy11/squbok-guide-v3
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2026 Atsushi Tsuchiya
+
+# Theme configuration
+theme:
+  name: material
+  language: ja
+
+  # Color scheme
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切り替え
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切り替え
+
+  # Features
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+
+  # Icons
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+nav:
+  - Home: index.md
+  - 📘 SQuBOK Guide:
+      - 1. ソフトウェア品質の基本概念: squbok/01_quality_concepts.md
+      - 2. ソフトウェア品質マネジメント: squbok/02_quality_management.md
+      - 3. ソフトウェア品質技術: squbok/03_quality_technologies.md
+      - 4. 専門的なソフトウェア品質の概念と技術: squbok/04_specialized_topics.md
+      - 5. ソフトウェア品質の応用領域: squbok/05_application_domains.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - admonition
+  - codehilite
+  - pymdownx.details
+
+plugins:
+  - search
